@@ -51,9 +51,9 @@ Ensure your `backend/.env` file contains the following configurations:
 PORT=8000
 MONGODB_URL=mongodb://127.0.0.1:27017
 CORS_ORIGIN=http://localhost:5173
-ACCESS_TOKEN_SECRET=youtube_project_access_token_secret_key_2026_super_secure_random_string
+ACCESS_TOKEN_SECRET=
 ACCESS_TOKEN_EXPIRY=1d
-REFRESH_TOKEN_SECRET=youtube_project_refresh_token_secret_key_2026_super_secure_random_string
+REFRESH_TOKEN_SECRET=
 REFRESH_TOKEN_EXPIRY=10d
 NODE_ENV=development
 
@@ -99,8 +99,8 @@ VITE_USER_baseURL=http://localhost:8000/users
 VITE_API_URL=http://localhost:8000/api/v1
 
 # YouTube Data API v3 Key (for fetching real YouTube videos on HomePage)
-VITE_YOUTUBE_API_KEY=AIzaSyBEKqs26vTYXf5qhnHI009JeWjkx9mym9Y
-VITE_API_KEY=AIzaSyBEKqs26vTYXf5qhnHI009JeWjkx9mym9Y
+VITE_YOUTUBE_API_KEY=
+VITE_API_KEY=
 ```
 
 ### 4. Start the Vite development server:
@@ -147,23 +147,4 @@ Always keep two separate terminal windows open:
 
 ---
 
-## 🔍 Troubleshooting & Common Issues
-
-### 1. `MONGO DB CONNECTION ERROR`
-- **Cause**: MongoDB service is not running locally.
-- **Fix**: 
-  - Windows: Open Services (`services.msc`), find **MongoDB Server**, and click **Start**.
-  - Or run `net start MongoDB` in an Administrator Command Prompt.
-  - If using MongoDB Atlas, update `MONGODB_URL` in `backend/.env` with your connection string.
-
-### 2. `[401] Invalid user password` or `User not found`
-- **Cause**: Attempting to sign in with an account that has not been registered yet or typing the wrong password.
-- **Fix**: Navigate to `/users/register`, create a new account with an avatar image, and then sign in.
-
-### 3. `Error in uploading avatar image`
-- **Cause**: Cloudinary credentials invalid or missing.
-- **Fix**: The backend now includes an automatic local storage fallback (`public/temp`). Ensure `backend/public/temp/` exists.
-
-### 4. `Failed to fetch data from YouTube API`
-- **Cause**: Incorrect YouTube API URL or missing API key.
-- **Fix**: Ensure `VITE_YOUTUBE_API_KEY` is present in `frontend/.env`. The application also includes built-in fallback videos if the quota limit is reached.
+is reached.
