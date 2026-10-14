@@ -111,8 +111,8 @@ VITE_USER_baseURL=http://localhost:8000/users
 VITE_API_URL=http://localhost:8000/api/v1
 
 # YouTube Data API v3 Key (for fetching real YouTube videos on HomePage)
-VITE_YOUTUBE_API_KEY=AIzaSyBEKqs26vTYXf5qhnHI009JeWjkx9mym9Y
-VITE_API_KEY=AIzaSyBEKqs26vTYXf5qhnHI009JeWjkx9mym9Y
+VITE_YOUTUBE_API_KEY=
+VITE_API_KEY=
 ```
 
 ### 4. Start the Vite development server:
