@@ -1,4 +1,4 @@
-# Project Setup and Run Guide (Frontend & Backend)
+# Project Setup 
 
 A complete guide to set up, configure, and run the **Personal**  application locally.
 
